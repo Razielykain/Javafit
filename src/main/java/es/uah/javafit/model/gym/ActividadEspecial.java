@@ -48,7 +48,7 @@ public class ActividadEspecial extends Actividad
     // Funciones:
     public double calcPrecioFinal(Socio socio)
     {
-        return socio.calcPrecio(price);
+        return socio.calcPrecio(getPrice());
     }
 
     @Override
