@@ -24,7 +24,8 @@ public class Actividad
     private String monitor;
     private String rutaImagen;
 
-    public Actividad(String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen) {
+    public Actividad(String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen) 
+    {
         this.id = id;
         this.titulo = titulo;
         this.tipo = tipo;
@@ -105,6 +106,7 @@ public class Actividad
     {
         this.rutaImagen = rutaImagen;
     }
+    
     // funciones:
     public int getAforoDisponible(ArrayList<Reserva> reservas, LocalDate fecha)
     {
@@ -114,4 +116,10 @@ public class Actividad
     {
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Actividad{" + "id=" + id + ", titulo=" + titulo + ", tipo=" + tipo + ", sala=" + sala + ", horario=" + horario + ", monitor=" + monitor + ", rutaImagen=" + rutaImagen + '}';
+    }
+    
 }
