@@ -8,9 +8,11 @@ package es.uah.javafit;
  *
  * @author razie
  */
-public class Javafit {
+public class Javafit 
+{
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static void main(String[] args) 
+    {
+        System.out.println("Bye World!");
     }
 }
