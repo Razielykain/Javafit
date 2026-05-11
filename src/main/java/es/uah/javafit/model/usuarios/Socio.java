@@ -66,6 +66,14 @@ public abstract class Socio extends User
     {
         this.tc = tc;
     }
+    
+    // FUNCIONES:
+    public abstract double calcPrecio(double base);
+    public abstract double getCuotaMensual();
+    public boolean esVIP()
+    {
+        return (SocioVIP.class==this.getClass());
+    }
 
     @Override
     public String toString() 
