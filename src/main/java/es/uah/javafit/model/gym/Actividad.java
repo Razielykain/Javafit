@@ -108,9 +108,13 @@ public class Actividad
     }
     
     // funciones:
-    public int getAforoDisponible(ArrayList<Reserva> reservas, LocalDate fecha)
+    public int getAforoDisponible(ArrayList<Reserva> reservas, LocalDate fecha, Actividad act)
     {
-        return 1; // temporal
+        long count = reservas.stream()
+            .filter(r -> r.getAct().equals(act))
+            .filter(r -> r.getFecha().equals(fecha))
+            .count();
+        return (int) (this.sala.getAforoMax()- count);
     }
     public boolean isEspecial()
     {
