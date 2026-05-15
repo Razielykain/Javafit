@@ -5,6 +5,10 @@
 package es.uah.javafit.model.gym;
 //imports
 import es.uah.javafit.model.usuarios.Socio;
+import es.uah.javafit.persistence.Mensaje;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -84,7 +88,28 @@ public class Reserva implements Serializable
     // Metodos y Funciones
     public void generarRecibo()
     {
-        // cuando aprenda a generar archivos lo hare
+         String nombreArchivo = "recibo_" + id + ".txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) 
+        {
+            writer.write("========== RECIBO JAVAFIT ==========");
+            writer.newLine();
+            writer.write("ID Reserva:  " + id);
+            writer.newLine();
+            writer.write("Socio:       " + this.socio.getName());
+            writer.newLine();
+            writer.write("Actividad:   " + this.act.getTitulo());
+            writer.newLine();
+            writer.write("Fecha:       " + this.fecha.toString());
+            writer.newLine();
+            writer.write("Coste:       " + this.coste + "€");
+            writer.newLine();
+            writer.write("====================================");
+
+            } 
+        catch (IOException e) 
+        {
+            Mensaje.error("Error al generar el recibo: " + e.getMessage());
+        }
     }
     public boolean esCancelable()
     {

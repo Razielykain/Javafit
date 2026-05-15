@@ -29,5 +29,6 @@ public class Javafit
             gestor = new GestorGym();
             DataLoader.cargarDatosPrueba(gestor);
         }
+        GestorPersistencia.guardar(gestor);
     }
 }

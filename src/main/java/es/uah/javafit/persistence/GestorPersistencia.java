@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class GestorPersistencia 
 {
-    static final String RUTA_ARC = "datos.dat";
+    static final String RUTA = "datos.dat";
 
     // Guarda el objeto en un archivo
     public static void guardar(GestorGym g)
@@ -21,7 +21,7 @@ public class GestorPersistencia
         try
         {
             ObjectOutputStream oos =
-                new ObjectOutputStream(new FileOutputStream(RUTA_ARC));
+                new ObjectOutputStream(new FileOutputStream(RUTA));
 
             oos.writeObject(g);
             oos.close();
@@ -38,7 +38,7 @@ public class GestorPersistencia
         try
         {
             ObjectInputStream ois =
-                new ObjectInputStream(new FileInputStream(RUTA_ARC));
+                new ObjectInputStream(new FileInputStream(RUTA));
 
             GestorGym gestor = (GestorGym) ois.readObject();
 
