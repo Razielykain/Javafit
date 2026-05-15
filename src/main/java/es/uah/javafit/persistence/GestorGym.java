@@ -29,6 +29,7 @@ public class GestorGym implements Serializable
     private ArrayList<Socio> socios;
     private ArrayList<Actividad> actividades;
     private ArrayList<Reserva> reservas;
+    private static final long serialVersionUID = 1L; // para el serializable
 
     public GestorGym(ArrayList<Admin> admins, ArrayList<Socio> socios, ArrayList<Actividad> actividades, ArrayList<Reserva> reservas) 
     {
@@ -36,6 +37,11 @@ public class GestorGym implements Serializable
         this.socios = socios;
         this.actividades = actividades;
         this.reservas = reservas;
+    }
+
+    public GestorGym() 
+    {
+        
     }
     
     //Setter y getter
