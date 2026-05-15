@@ -1,20 +1,22 @@
+package es.uah.javafit.persistence;
+
+import java.io.Serializable;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package es.uah.javafit.model.usuarios;
-
-import java.io.Serializable;
 
 /**
  *
  * @author razie
  */
-public class Admin extends User implements Serializable
+public class JavaFitError extends Exception implements Serializable
 {
 
-    public Admin(String user, String password) 
+    public JavaFitError(String message) 
     {
-        super(user, password);
+        super(message);
     }
+
 }

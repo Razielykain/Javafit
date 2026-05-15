@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.enums;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public enum TipoActividad 
+public enum TipoActividad implements Serializable
 {
     YOGA("Yoga"),
     MUSCULACION("Musculación"),

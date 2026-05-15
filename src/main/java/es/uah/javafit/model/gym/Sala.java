@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.gym;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class Sala 
+public class Sala implements Serializable
 {
     private String name;
     private int aforoMax;

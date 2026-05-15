@@ -6,17 +6,18 @@ package es.uah.javafit.model.gym;
 //imports
 import es.uah.javafit.model.enums.TipoActividad;
 import es.uah.javafit.model.usuarios.Socio;
+import java.io.Serializable;
 
 /**
  *
  * @author razie
  */
-public class ActividadEspecial extends Actividad 
+public class ActividadEspecial extends Actividad implements Serializable
 {
     private double price;
     private String descripcion;
 
-    public ActividadEspecial(double price, String descripcion, String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen) 
+    public ActividadEspecial(String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen, double price, String descripcion) 
     {
         super(id, titulo, tipo, sala, horario, monitor, rutaImagen);
         this.price = price;
