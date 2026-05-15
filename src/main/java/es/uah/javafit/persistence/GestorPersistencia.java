@@ -4,25 +4,52 @@
  */
 package es.uah.javafit.persistence;
 //imports
-/**
- *
- * @author razie
- */
-public class GestorPersistencia 
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
+
+public class GestorPersistencia
 {
-    static final String RUTA_ARC = ""; //temp
-    
-    // no se si esto lleva constructor o no
-    
-    // no hay setters ni getters, es final
-    // Funciones y metodos
+    static final String RUTA_ARC = "datos.dat";
+
+    // Guarda el objeto en un archivo
     public static void guardar(GestorGym g)
     {
-        // lo hare cuando aprenda a usar esto
+        try
+        {
+            ObjectOutputStream oos =
+                new ObjectOutputStream(new FileOutputStream(RUTA_ARC));
+
+            oos.writeObject(g);
+            oos.close();
+        }
+        catch (IOException e)
+        {
+            Mensaje.error(e.getMessage());
+        }
     }
-    
-    public static void cargar()
+
+    // Carga el objeto desde un archivo
+    public static GestorGym cargar()
     {
-        // en verdad devuelve GestorGym -> cambiar luego
+        try
+        {
+            ObjectInputStream ois =
+                new ObjectInputStream(new FileInputStream(RUTA_ARC));
+
+            GestorGym gestor = (GestorGym) ois.readObject();
+
+            ois.close();
+
+            return gestor;
+        }
+        catch (IOException | ClassNotFoundException e)
+        {
+            Mensaje.error(e.getMessage());
+            return null;
+        }
     }
 }

@@ -14,9 +14,9 @@ public abstract class Socio extends User
     private String name;
     private String telefono;
     private String dir;
-    private TarjetaCredito tc;
+    private String tc; // si se hace se cambia a TarjetaCredito
 
-    public Socio(String name, String telefono, String dir, TarjetaCredito tc, String user, String password) 
+    public Socio(String user, String password, String name, String telefono, String dir, String tc) 
     {
         super(user, password);
         this.name = name;
@@ -57,12 +57,12 @@ public abstract class Socio extends User
         this.dir = dir;
     }
 
-    public TarjetaCredito getTc() 
+    public String getTc() 
     {
         return tc;
     }
 
-    public void setTc(TarjetaCredito tc) 
+    public void setTc(String tc) 
     {
         this.tc = tc;
     }

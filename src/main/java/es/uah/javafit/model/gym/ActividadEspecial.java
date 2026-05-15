@@ -16,7 +16,7 @@ public class ActividadEspecial extends Actividad
     private double price;
     private String descripcion;
 
-    public ActividadEspecial(double price, String descripcion, String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen) 
+    public ActividadEspecial(String id, String titulo, TipoActividad tipo, Sala sala, Horario horario, String monitor, String rutaImagen, double price, String descripcion) 
     {
         super(id, titulo, tipo, sala, horario, monitor, rutaImagen);
         this.price = price;

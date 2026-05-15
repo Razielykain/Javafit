@@ -18,7 +18,12 @@ public class TarjetaCredito
     private YearMonth expDate;
     private int ccv;
 
-    // no hay constructor aun por que probablemente se cree utilizando distintos jTextField
+    public TarjetaCredito(String name, String num, YearMonth expDate, int ccv) {
+        this.name = name;
+        this.num = num;
+        this.expDate = expDate;
+        this.ccv = ccv;
+    }
     
     // Setter y getter
     public String getName() 

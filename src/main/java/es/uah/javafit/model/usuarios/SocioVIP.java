@@ -13,9 +13,8 @@ public class SocioVIP extends Socio
     static final double CMENSUAL = 0; // temporal
     static final double DESCUENTO = 0.1;
 
-    public SocioVIP(String name, String telefono, String dir, TarjetaCredito tc, String user, String password) 
-    {
-        super(name, telefono, dir, tc, user, password);
+    public SocioVIP(String user, String password, String name, String telefono, String dir, String tc) {
+        super(user, password, name, telefono, dir, tc);
     }
 
     @Override

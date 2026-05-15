@@ -12,9 +12,8 @@ public class SocioBasico extends Socio
 {
     static final double CMENSUAL = 0; // temporal
 
-    public SocioBasico(String name, String telefono, String dir, TarjetaCredito tc, String user, String password) 
-    {
-        super(name, telefono, dir, tc, user, password);
+    public SocioBasico(String user, String password, String name, String telefono, String dir, String tc) {
+        super(user, password, name, telefono, dir, tc);
     }
 
     @Override

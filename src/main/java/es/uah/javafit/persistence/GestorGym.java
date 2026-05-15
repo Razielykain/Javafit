@@ -41,7 +41,10 @@ public class GestorGym implements Serializable
 
     public GestorGym() 
     {
-        
+        this.admins = new ArrayList<>();
+        this.socios = new ArrayList<>();
+        this.actividades = new ArrayList<>();
+        this.reservas = new ArrayList<>();
     }
     
     //Setter y getter
