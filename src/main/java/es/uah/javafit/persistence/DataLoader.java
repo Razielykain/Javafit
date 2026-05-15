@@ -179,15 +179,15 @@ public class DataLoader
              
              gestor.realizarReserva(maria,  spinning,    LocalDate.of(2026, 5, 19));
              
-             gestor.realizarReserva(carlos, crossfit,    LocalDate.of(2026, 5, 17));
+             gestor.realizarReserva(carlos, crossfit,    LocalDate.of(2026, 5, 16));
              
-             gestor.realizarReserva(ana,    yogaAvanzado, LocalDate.of(2026, 5, 18));
+             gestor.realizarReserva(ana,    yogaAvanzado, LocalDate.of(2026, 5, 17));
              
-             gestor.realizarReserva(juan,   natacion,    LocalDate.of(2026, 5, 20));
+             gestor.realizarReserva(juan,   natacion,    LocalDate.of(2026, 5, 21));
               
-             gestor.realizarReserva(maria,  yogaAvanzado, LocalDate.of(2026, 5, 25));
+             gestor.realizarReserva(maria,  yogaAvanzado, LocalDate.of(2026, 5, 24));
          } catch (NoArgEx ex) {
-            System.out.println("Estan hechas de tal forma que no den error por lo que esto no deberia salir nunca");
+            Mensaje.error(ex.getMessage()); // no deberia salir por que se supone que todo esta bien
          }
     }
 }
