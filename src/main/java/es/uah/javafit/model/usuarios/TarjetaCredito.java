@@ -66,12 +66,30 @@ public class TarjetaCredito  implements Serializable
     {
         this.ccv = ccv;
     }
-
-    @Override
-    // probablemente haya que hacer una funcion digitos() para solo mostrar los ultimos 4 digitos de la tarjeta
-    public String toString() 
+    
+    public String getNumEnmascarado()
     {
-        return "TarjetaCredito{" + "name=" + name + ", num=" + num + ", expDate=" + expDate + ", ccv=" + ccv + '}';
+        if (num == null || num.length() < 4)
+            return "****";
+        return "**** **** **** " + num.substring(num.length() - 4);
     }
+    //hacemos un metodo para mostrar solo los ultimos 4 digitos de la tarjeta, no todos
+    
+    public boolean estaVigente()
+    {
+        if (expDate == null) return false;
+        return !expDate.isBefore(YearMonth.now());
+    }
+    //hacemos otro metodo para comprobar que la tarjeta esta vigente
+    
+    @Override
+    public String toString()
+    {
+        return "TarjetaCredito{titular=" + name +
+               ", num=" + getNumEnmascarado() +
+               ", expDate=" + expDate + '}';
+        //el ccv no hace falta mostrarlo ya que nunca se muestra en ningún sitio
+    }
+    
     
 }
