@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.usuarios;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class SocioVIP extends Socio
+public class SocioVIP extends Socio implements Serializable
 {
     static final double CMENSUAL = 0; // temporal
     static final double DESCUENTO = 0.1;

@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.usuarios;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public abstract class Socio extends User
+public abstract class Socio extends User implements Serializable
 {
     // atributos
     private String name;

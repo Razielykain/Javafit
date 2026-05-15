@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.persistence;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class NoArgEx extends Exception {
+public class NoArgEx extends Exception implements Serializable{
 
     public NoArgEx(String msg) {
         super(msg);

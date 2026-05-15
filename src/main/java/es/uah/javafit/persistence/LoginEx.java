@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.persistence;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class LoginEx extends Exception {
+public class LoginEx extends Exception implements Serializable{
 
     /**
      * Creates a new instance of <code>LoginEx</code> without detail message.

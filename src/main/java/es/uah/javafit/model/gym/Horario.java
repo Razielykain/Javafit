@@ -6,6 +6,7 @@ package es.uah.javafit.model.gym;
 
 // imports
 import es.uah.javafit.model.enums.DiaSemana;
+import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.EnumSet;
 
@@ -13,7 +14,7 @@ import java.util.EnumSet;
  *
  * @author razie
  */
-public class Horario 
+public class Horario implements Serializable
 {
     private EnumSet<DiaSemana> dias;
     private LocalTime hInicio;

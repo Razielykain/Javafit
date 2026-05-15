@@ -12,6 +12,7 @@ import es.uah.javafit.model.gym.Horario;
 import es.uah.javafit.model.gym.Sala;
 import es.uah.javafit.model.usuarios.SocioBasico;
 import es.uah.javafit.model.usuarios.SocioVIP;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.EnumSet;
@@ -20,7 +21,7 @@ import java.util.UUID;
  *
  * @author razie
  */
-public class DataLoader 
+public class DataLoader implements Serializable
 {
      public static void cargarDatosPrueba(GestorGym gestor) {
  

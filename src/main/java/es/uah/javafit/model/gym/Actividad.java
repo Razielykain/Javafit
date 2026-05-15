@@ -6,6 +6,7 @@ package es.uah.javafit.model.gym;
 // imports
 
 import es.uah.javafit.model.enums.TipoActividad;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author razie
  */
-public class Actividad 
+public class Actividad implements Serializable
 {
     private String id;
     private String titulo;

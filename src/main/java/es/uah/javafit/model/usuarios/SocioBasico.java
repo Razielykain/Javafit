@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.usuarios;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class SocioBasico extends Socio
+public class SocioBasico extends Socio implements Serializable
 {
     static final double CMENSUAL = 0; // temporal
 

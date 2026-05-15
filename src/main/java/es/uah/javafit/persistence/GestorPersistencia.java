@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 
-public class GestorPersistencia
+public class GestorPersistencia 
 {
     static final String RUTA_ARC = "datos.dat";
 

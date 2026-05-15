@@ -4,13 +4,14 @@
  */
 package es.uah.javafit.model.enums;
 
+import java.io.Serializable;
 import java.time.DayOfWeek;
 
 /**
  *
  * @author razie
  */
-public enum DiaSemana 
+public enum DiaSemana implements Serializable
 {
     LUNES("Lunes"),
     MARTES("Martes"),

@@ -5,6 +5,7 @@
 package es.uah.javafit.model.gym;
 //imports
 import es.uah.javafit.model.usuarios.Socio;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
@@ -12,7 +13,7 @@ import java.time.LocalDate;
  *
  * @author razie
  */
-public class Reserva 
+public class Reserva implements Serializable
 {
     private String id;
     private Socio socio;

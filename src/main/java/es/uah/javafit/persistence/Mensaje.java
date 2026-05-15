@@ -8,9 +8,10 @@ package es.uah.javafit.persistence;
  *
  * @author razie
  */
+import java.io.Serializable;
 import javax.swing.JOptionPane;
 
-public class Mensaje
+public class Mensaje implements Serializable
 {
     public static void error(String msg)
     {

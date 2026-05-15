@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.usuarios;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public abstract class User 
+public abstract class User  implements Serializable
 {
     private String user;
     private String password;

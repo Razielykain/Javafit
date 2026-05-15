@@ -4,11 +4,13 @@
  */
 package es.uah.javafit.model.usuarios;
 
+import java.io.Serializable;
+
 /**
  *
  * @author razie
  */
-public class Admin extends User 
+public class Admin extends User implements Serializable
 {
 
     public Admin(String user, String password) 

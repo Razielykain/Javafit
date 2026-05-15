@@ -9,8 +9,9 @@ package es.uah.javafit.model.usuarios;
  * @author razie
  */
 // imports
+import java.io.Serializable;
 import java.time.YearMonth;
-public class TarjetaCredito 
+public class TarjetaCredito  implements Serializable
 {
     //atributos
     private String name;
