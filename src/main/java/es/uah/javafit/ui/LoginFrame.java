@@ -188,6 +188,7 @@ public class LoginFrame extends JFrame
     private void abrirRegistro()
     {
         new RegistroFrame(gestor, this).setVisible(true);
-        setVisible(false); // ocultar login mientras se registra
+        setVisible(false); 
+        // ocultar login mientras se registra
     }
 }
